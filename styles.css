@@ -1,0 +1,51 @@
+@font-face {font-family: "Century Gothic";
+    src: url("fonts/century-gothic.eot");
+}
+
+body{
+    text-align: center;
+    background-color: #202124;
+    color: #f5f5f5
+}
+
+
+h1{
+text-decoration: underline;
+}
+  input[type=submit] {
+    width: 5%;
+    font-family: "Century Gothic", Helvetica, sans-serif;
+    background-color: #ff2d50;
+    color: white;
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: darkred;
+  }
+
+  #task-title
+{
+    font-family: "Century Gothic", Helvetica, sans-serif;
+    width: 10%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: thin solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: width 0.4s ease-in-out;
+}
+
+#task-title:focus
+{
+width:20%
+}
+
+.row{
+    width: 100%;
+    text-align: center;
+}
