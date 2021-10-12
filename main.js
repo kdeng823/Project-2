@@ -7,8 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
       let task_priority = document.querySelector('#task-priority').value;
       let task_status = document.querySelector('input[name=task-status]:checked').value;
       let new_task_html = `
-    <div class = "new-task-html"> <span> ${task_text} </span>    <span> - Priority: ${task_priority} </span> <span> - Status: ${task_status} </span>  </div> <button class="btn btn-outline-success"> Completed </button>
-      <button class="btn btn-outline-danger"> Remove </button> </div>
+    <div class = "task-title"> <span> ${task_text} </span>  </div> <div class = "task-priority"> <span> - Priority: ${task_priority} </span> </div> <div class = "task-status"> <span> - Status: ${task_status} </span>  </div>
+     <button class="btn btn-outline-success"> Completed </button>
+      <button class="btn btn-outline-danger"> Remove </button> 
         `;
 
       li.innerHTML = new_task_html
@@ -26,7 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
         element.parentElement.remove();
     }
     if (element.className === 'btn btn-outline-success'){
-        element.parentElement.querySelector('.new-task-html').style.textDecoration = "line-through";
+        element.parentElement.querySelector('.task-title').style.textDecoration = "line-through";
+        element.parentElement.querySelector('.task-priority').style.textDecoration = "line-through";
+        element.parentElement.querySelector('.task-status').style.textDecoration = "line-through";
         element.task_status = "btn btn-outline-success";
     }
   })
